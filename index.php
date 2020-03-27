@@ -2,13 +2,13 @@
 require_once 'load.php';
 
 if(isset($_GET['filter'])){
-    //Filter
+   
     $args = array(
         'tbl'=>'tbl_products',
         'tbl2'=>'tbl_category',
         'tbl3'=>'tbl_prod_category',
-        'col'=>'movies_id',
-        'col2'=>'id',
+        'col'=>'prod_id',
+        'col2'=>'category_id',
         'col3'=>'category_name',
         'filter'=>$_GET['filter']
     );
