@@ -13,10 +13,8 @@ function getAll($tbl)
     }
 }
 
-function getSingleProd($tbl, $col, $id)
+function getSingleProd($tbl, $col, $id) ///this will be for searching for one prod
 {
-    //TODO: finish the function based on getAll, this time only return
-    // one movie's fields
 
     $pdo = Database::getInstance()->getConnection();
     // $query = 'SELECT * FROM '.$tbl.' WHERE '$col' = '.$id;
