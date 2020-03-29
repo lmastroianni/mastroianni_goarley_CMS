@@ -5,7 +5,7 @@ header("Content-Type: application/json; charset=UTF-8");
 
 // include database and object files
 include_once '../../config/database.php';
-include_once '../objects/movie.php';
+include_once '../objects/product.php';
 
 // instantiate database and movie object
 $db       = Database::getInstance()->getConnection();
@@ -15,12 +15,13 @@ $prod = new Product($db);
 
 // query movies
 if (isset($_GET['id'])) {
-    $stmt = $movie->getProdsByID($_GET['id']);
+    $stmt = $prod->getProdsByID($_GET['id']);
 } else if(isset($_GET['category'])){
-    $stmt = $movie->getProdsByCategory($_GET['category']);
+    $stmt = $prod->getProductsByCategories($_GET['category']);
 }else {
-    $stmt = $movie->getProds();
+    $stmt = $prod->getProds();
 }
+
 
 $num = $stmt->rowCount();
 
@@ -31,7 +32,7 @@ if ($num > 0) {
     $results = array();
 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $single_movie = $row;
+        $single_prod = $row;
         $results[]    = $single_prod;
     }
 

@@ -1,5 +1,5 @@
 <header>
-    <h2>This is the header</h2>
+    <h2>Sportcheck CMS</h2>
     <nav class="filterNav">
         <ul>
             <li><a href="index.php?filter=hockey">Hockey</a></li>
@@ -12,4 +12,5 @@
             <li><a href="index.php">All</a></li>
         </ul>
     </nav>
+    <a href="admin/admin_login.php">LOGIN PAGE</a>
 </header>

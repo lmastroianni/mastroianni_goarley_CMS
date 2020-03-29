@@ -29,7 +29,7 @@ function getSingleProd($tbl, $col, $id) ///this will be for searching for one pr
 
 }
 
-function getProdsByCategory($args)
+function getProductsByCategories($args)
 {
     $pdo = Database::getInstance()->getConnection();
 
@@ -39,7 +39,6 @@ function getProdsByCategory($args)
     $filterQuery .= ' AND t2.' . $args['col3'] . ' = "' . $args['filter'] . '"';
 
     $results = $pdo->query($filterQuery);
-
 
 
     if ($results) {
