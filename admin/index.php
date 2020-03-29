@@ -3,17 +3,17 @@
     confirm_logged_in();
 
     if (isset($_GET['filter'])) {
-        //Filter is not working
+       
         $args = array(
             'tbl' => 'tbl_products',
             'tbl2' => 'tbl_category',
-            'tbl3' => 'tbl_prod_category',
+            'tbl3' => 'tbl_products_categories',
             'col' => 'prod_id',
             'col2' => 'category_id',
             'col3' => 'category_name',
             'filter' => $_GET['filter'],
         );
-        $getProds = getProdsByCategory($args);
+        $getProds = getProductsByCategories($args);
     } else {
         $prod_table = 'tbl_products';
         $getProds = getAll($prod_table);
@@ -37,7 +37,7 @@
     <a href="admin_edituser.php">Edit User</a>
     <a href="admin_deleteuser.php">Delete User</a>
 
-    <a href="admin_addmovie.php">Add Movie</a>
+    <a href="admin_addmovie.php">Add Product</a>
 
     <a href="admin_logout.php">Sign Out</a>
 </body>

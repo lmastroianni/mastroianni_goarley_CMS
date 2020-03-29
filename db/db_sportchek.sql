@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Mar 27, 2020 at 05:38 PM
+-- Generation Time: Mar 28, 2020 at 02:38 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -52,7 +52,7 @@ INSERT INTO `tbl_category` (`category_id`, `category_name`) VALUES
 CREATE TABLE `tbl_products` (
   `id` int(11) NOT NULL,
   `prod_number` int(50) NOT NULL,
-  `image` varchar(20) NOT NULL,
+  `image` varchar(30) NOT NULL,
   `name` varchar(50) NOT NULL,
   `description` text NOT NULL,
   `price` varchar(20) NOT NULL,
@@ -74,7 +74,7 @@ INSERT INTO `tbl_products` (`id`, `prod_number`, `image`, `name`, `description`,
 (8, 332847699, 'nike_soccer2.jpeg', 'Nike FA19 Mercurial Skills Soccer Ball -Mango', 'Quality and performance combine in the Nike Skills Soccer Ball, making it ideal for training and recreational play. It features high contrast graphics for easier ball tracking.', '10.50', '2'),
 (9, 332847813, 'nike_soccer3.jpeg', 'Nike FA19 Strike Size 5 Soccer Ball', 'The Premium League Strike Soccer Ball is ready for everyday play with high-contrast graphics to help you track it and a 12-panel design for true and accurate flight.', '29.99', '2'),
 (10, 332933001, 'puma_soccer.jpeg', 'Puma Final 6 Ms Trainer Size 5 Soccer Ball - Wht', 'Entry level Machine Stitched training ball. Suitable for both training and fun games with friends. The combination of the TPU casing, TPE foam, and polyester backing with rubber bladder and machine stitching gives the ball a soft feel; excellent shape; bounce and flight characteristics.', '24.99', '2'),
-(11, 332705909, 'capex_womens.jpeg', 'Capix Aplayado 26 Women\'s Cruiser Bike 2019', 'Enjoy casual rides around town or to local music festival on this classic-style cruiser. The spring saddle seat coupled with an upright riding position makes for a comfortable ride at cruising speeds, taking in the scenery and socializing with friends.', '249.99', '3'),
+(11, 332705909, 'capix_womens.jpeg', 'Capix Aplayado 26 Women\'s Cruiser Bike 2019', 'Enjoy casual rides around town or to local music festival on this classic-style cruiser. The spring saddle seat coupled with an upright riding position makes for a comfortable ride at cruising speeds, taking in the scenery and socializing with friends.', '249.99', '3'),
 (12, 332708585, 'diadora_mens_2.jpeg', 'Diadora Orbita 27.5 Men\'s Mountain Bike 2019', 'The Diadora Orbita is a great choice for your everyday mountain bike. The lightweight hardtail design, quality Shimano components and 18-speed drivetrain provides the rider with a versatile bike that is great for riding around the city and also performs well on recreational trails.', '245.97', '3'),
 (13, 332708641, 'diadora_mens.jpeg', 'Diadora Paradiso 27.5 Women\'s Mountain Bike 2019', 'The Diadora Paradiso is a great choice for women looking for an everyday mountain bike. The lightweight hardtail design, quality components and 21-speed drivetrain provides the rider with a versatile bike that is great for riding around the city and also performs well on recreational trails.', '459.99', '3'),
 (14, 332956669, 'mongoose_mens.jpeg', 'Mongoose Ravage 24 Junior Mountain Bike 2019', 'Up the hill. Now down the hill. Now up the hill, now down, down, down the hill. Take your bike riding to the next level with the full suspension Mongoose Ravage. Mountain biking is hitting the paths hard and you can be part of the fun! Just like a Mongoose pro rider, taking the mountain for yourself, enjoy the fun of 21 speeds with a Shimano Rear Derailleur and twist shifters on the handlebars. There is a full suspension frame and front suspension fork that is like sitting on a shock absorber as you tackle bumps, limbs, rocks and drops. The alloy rims help you try to keep the weight down and the V-brakes make sure that when you need to stop you can stop. Plus a three-piece crank for plenty of performance. The Ravage is ready to match a sense of adventure for riders ages 14 years old and up and at least 67 inches tall. There is nothing you can’t do on a Mongoose.', '299.99', '3'),
@@ -93,7 +93,7 @@ INSERT INTO `tbl_products` (`id`, `prod_number`, `image`, `name`, `description`,
 (27, 332479762, 'columbia_mens.jpeg', 'Columbia Men\'s Mesh Snapback Hat ', 'It’s a classic, snap-back, mesh ball cap featuring the Columbia Sportswear logo with groovy-styled hills and trees that are front and center. This is the hat all the cool kids will be wearing, a future, worn-in, go-to favorite.', '29.99', '6'),
 (28, 332962434, 'hurley_mens.jpeg', 'Hurley Men\'s One and Only Gradient Snapback Hat', 'The Hurley One And Only Hat features stretchy mesh panels and an adjustable snap closure for customized comfort.', '21.97', '6'),
 (29, 333000745, 'quiksilver_mens.jpeg', 'Quiksilver Men\'s Final Hat - Navy', 'Suiting fabric', '34.99', '6'),
-(30, 332426798, 'underarmour.jpeg', 'Under Armour Men\'s Blitzing 3.0 Stretch Fit Hat', 'The Third Generation Of The Most Popular Under Armour Hat. Performance Materials, Classic Fit, And Our Signature HeatGear Sweatband Make This An Easy Favorite.', '29.99', '6'),
+(30, 332426798, 'underarmour_mens.jpeg', 'Under Armour Men\'s Blitzing 3.0 Stretch Fit Hat', 'The Third Generation Of The Most Popular Under Armour Hat. Performance Materials, Classic Fit, And Our Signature HeatGear Sweatband Make This An Easy Favorite.', '29.99', '6'),
 (40, 333033800, 'adidas_shoe.jpeg', 'adidas Men\'s Game Day Running Shoes', 'Every run leads right up to game day. Keeping that in mind, these versatile adidas shoes feature energised cushioning and a locked-down fit for nimble agility. Underfoot, a turf-inspired outsole delivers great grip no matter where you’re prepping to play.', '79.98', '7'),
 (43, 333033800, 'adidas_shoe.jpeg', 'adidas Men\'s Game Day Running Shoes', 'Every run leads right up to game day. Keeping that in mind, these versatile adidas shoes feature energised cushioning and a locked-down fit for nimble agility. Underfoot, a turf-inspired outsole delivers great grip no matter where you’re prepping to play.', '79.98', '7'),
 (44, 332692338, 'asics_shoe.jpeg', 'ASICS Men\'s Gel Excite 6 Running Shoes ', 'The ASICS Men\'s Gel Excite 6 Running Shoes features a durable midsole material that provides cushion for all day comfort. Breathable mesh upper with less overlays provides a more comfortable and better fitting environment. The styling and design cues used were to create more modern and younger silhouette to excite.', '109.99', '7');
@@ -105,8 +105,46 @@ INSERT INTO `tbl_products` (`id`, `prod_number`, `image`, `name`, `description`,
 --
 
 CREATE TABLE `tbl_products_categories` (
-  `id` int(11) NOT NULL
+  `prod_cat_id` int(11) NOT NULL,
+  `prod_id` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_products_categories`
+--
+
+INSERT INTO `tbl_products_categories` (`prod_cat_id`, `prod_id`, `category_id`) VALUES
+(1, 1, 1),
+(2, 2, 1),
+(3, 3, 1),
+(4, 4, 1),
+(5, 5, 1),
+(6, 6, 2),
+(7, 7, 2),
+(8, 8, 2),
+(9, 9, 2),
+(10, 10, 2),
+(11, 11, 3),
+(12, 12, 3),
+(13, 13, 3),
+(14, 14, 3),
+(15, 15, 3),
+(16, 16, 4),
+(17, 17, 4),
+(18, 18, 4),
+(19, 19, 4),
+(20, 20, 4),
+(21, 21, 5),
+(22, 22, 5),
+(23, 23, 5),
+(24, 24, 5),
+(25, 25, 5),
+(26, 26, 6),
+(27, 27, 6),
+(28, 28, 6),
+(29, 29, 6),
+(30, 30, 6);
 
 -- --------------------------------------------------------
 
@@ -115,14 +153,21 @@ CREATE TABLE `tbl_products_categories` (
 --
 
 CREATE TABLE `tbl_user` (
-  `id` int(11) NOT NULL,
-  `first_name` varchar(20) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `user_fname` varchar(20) NOT NULL,
   `user_name` varchar(20) NOT NULL,
   `user_email` varchar(50) NOT NULL,
-  `user_password` varchar(32) NOT NULL,
+  `user_pass` varchar(32) NOT NULL,
   `verified` int(1) NOT NULL,
   `user_ip` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_user`
+--
+
+INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_email`, `user_pass`, `verified`, `user_ip`) VALUES
+(1, 'Lucas', 'mastro4', 'lcmhockey@hotmail.com', '1234', 1, '::1');
 
 --
 -- Indexes for dumped tables
@@ -144,7 +189,7 @@ ALTER TABLE `tbl_products`
 -- Indexes for table `tbl_products_categories`
 --
 ALTER TABLE `tbl_products_categories`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`prod_cat_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -166,7 +211,7 @@ ALTER TABLE `tbl_products`
 -- AUTO_INCREMENT for table `tbl_products_categories`
 --
 ALTER TABLE `tbl_products_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `prod_cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

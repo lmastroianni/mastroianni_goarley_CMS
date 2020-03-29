@@ -6,13 +6,13 @@ if(isset($_GET['filter'])){
     $args = array(
         'tbl'=>'tbl_products',
         'tbl2'=>'tbl_category',
-        'tbl3'=>'tbl_prod_category',
+        'tbl3'=>'tbl_products_categories',
         'col'=>'prod_id',
         'col2'=>'category_id',
         'col3'=>'category_name',
         'filter'=>$_GET['filter']
     );
-    $getProds = getProdsByCategory($args);
+    $getProds = getProductsByCategories($args);
 }else{
     $prod_table = 'tbl_products';
     $getProds = getAll($prod_table);
@@ -31,7 +31,7 @@ if(isset($_GET['filter'])){
 
 <?php include 'templates/header.php';?>
 
-<h1>SportCheck CMS</h1>
+<!-- <h1>SportCheck CMS</h1> -->
 
 
 
@@ -44,6 +44,8 @@ if(isset($_GET['filter'])){
     </div>
     </a>
 <?php endwhile; ?>
+
+
 
 <?php include 'templates/footer.php';?>
 
