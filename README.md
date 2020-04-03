@@ -21,7 +21,7 @@ Using Docker:
 Open the project in your terminal, then paste the following and go.
 
 $ docker-compose up
-Then in the browser of your choice, paste the following url:
+Then in the browser of your choice, paste the following url: https://github.com/lmastroianni/mastroianni_goarley_CMS.git
 
 localhost:8888
 Using MAMP/ WAMP:
