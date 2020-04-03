@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Mar 28, 2020 at 02:38 PM
+-- Generation Time: Apr 03, 2020 at 12:56 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -41,7 +41,8 @@ INSERT INTO `tbl_category` (`category_id`, `category_name`) VALUES
 (3, 'biking'),
 (4, 'tennis'),
 (5, 'yoga'),
-(6, 'hats');
+(6, 'hats'),
+(7, 'shoes');
 
 -- --------------------------------------------------------
 
@@ -50,7 +51,7 @@ INSERT INTO `tbl_category` (`category_id`, `category_name`) VALUES
 --
 
 CREATE TABLE `tbl_products` (
-  `id` int(11) NOT NULL,
+  `prod_id` int(11) NOT NULL,
   `prod_number` int(50) NOT NULL,
   `image` varchar(30) NOT NULL,
   `name` varchar(50) NOT NULL,
@@ -63,7 +64,7 @@ CREATE TABLE `tbl_products` (
 -- Dumping data for table `tbl_products`
 --
 
-INSERT INTO `tbl_products` (`id`, `prod_number`, `image`, `name`, `description`, `price`, `category`) VALUES
+INSERT INTO `tbl_products` (`prod_id`, `prod_number`, `image`, `name`, `description`, `price`, `category`) VALUES
 (1, 332888744, 'bauer_2.6.jpeg', 'Bauer Vapor X2.6 Senior Skate', 'The Vapor X2.6 Skate is built to deliver a combination of instant step-in comfort and high level performance. A one-piece 3D Polycarb quarter construction provides a combination of support and comfort. A Microfiber Liner offers even more comfort and a soft internal feel. A 30 oz. felt tongue with metatarsal guard gives you an advanced level of support and flex.', '229.99', '1'),
 (2, 332761293, 'bauer_goalie.jpeg', 'Bauer Vapor X2.7 Junior Goalie Skates', 'The Bauer Vapor X2.7 Junior Goalie Skates feature an all-new injected quarter and improved fit for better depth and wrap on top of the foot. The Memory Foam Ankle Padding along with grip liner keeps you comfortable and secure so you can slide post to post with ease.', '229.99', '1'),
 (3, 332278930, 'bauer_x_junior.jpeg', 'Bauer Vapor X600 Gen II Junior Hockey Skates', 'The only thing your opponents will see is a blur as you skate past them in the new Bauer X600 Hockey Skates. A sleek fiber composite upper with X-rib pattern and the 1-piece injected heel and ankle core are built for speed.', '159.97', '1'),
@@ -88,15 +89,17 @@ INSERT INTO `tbl_products` (`id`, `prod_number`, `image`, `name`, `description`,
 (22, 333068049, 'yoga_brown.jpeg', '  Byoga B Mat Cork', 'B MAT cork offers a 100% natural cork top surface with a 100% natural rubber bottom surface. Simple. Sharp. Easy on the eyes. This B MAT is an exceptional eco-sustainable yoga mat option offering superior grip when damp. Ideal for a hot class or a challenging vinyasa practice, the quick-dry, 4mm thick B MAT Cork is an elevated, unique and grounding take on the traditional yoga mat. Top surface use only.', '92.99', '5'),
 (23, 333068121, 'yoga_pink.jpeg', 'Halfmoon Deluxe Mat Garnet', 'The Deluxe Studio Mat is extra comfortable for a softer impact. Providing yogis with generous cushioning for daily asana, the Deluxe Studio Mat is suitable for all styles and all levels of yoga, pilates, and conditioning while offering a soft surface even when layered with hardwood or concrete floors. The waffled surface creates a non-slip texture, making it ideal for anything from hatha yoga to an energetic asana practice. Lightweight, easy to clean, and durable, this mat is perfect for daily use.\r\n\r\n', '45.00', '5'),
 (24, 332889763, 'yoga_purple.jpeg', 'Gaiam 6Mm Reversible Printed Yoga Mat- Plumstone', 'Featuring a non-slip, textured surface, the Gaiam® Studio Select 6mm Premium Reversible Yoga Mat offers cushioned comfort and grip to stabilize and support you during your practice.', '39.99', '5'),
-(25, 333068059, 'yoga_red.jpeg', 'Byoga Bmat Everday 4Mm Earth Rose', 'The B MAT Everyday 4mm has been our top selling mat since the beginning. The B MAT Everyday is designed with every-yogi in mind. Super sweaty and fast moving, or room-temp with long holds -- the B MAT Everyday is for every-practice.', '82.00', '5'),
+(25, 333068059, 'yoga_cork.jpeg', 'Byoga Bmat Everday 4Mm - Cork', 'The B MAT Everyday 4mm has been our top selling mat since the beginning. The B MAT Everyday is designed with every-yogi in mind. Super sweaty and fast moving, or room-temp with long holds -- the B MAT Everyday is for every-practice.', '82.00', '5'),
 (26, 332690173, 'adidas_mens.jpeg', 'adidas Originals Men\'s Dart Snapback Hat - Camo', 'A clean and simple logo look with a classic vibe. A bit of wool adds a sturdy, structured feel to this five-panel hat. It’s detailed with an embroidered Trefoil outline and features a pre-curved brim to help shield you from the sun.', '19.97', '6'),
 (27, 332479762, 'columbia_mens.jpeg', 'Columbia Men\'s Mesh Snapback Hat ', 'It’s a classic, snap-back, mesh ball cap featuring the Columbia Sportswear logo with groovy-styled hills and trees that are front and center. This is the hat all the cool kids will be wearing, a future, worn-in, go-to favorite.', '29.99', '6'),
 (28, 332962434, 'hurley_mens.jpeg', 'Hurley Men\'s One and Only Gradient Snapback Hat', 'The Hurley One And Only Hat features stretchy mesh panels and an adjustable snap closure for customized comfort.', '21.97', '6'),
 (29, 333000745, 'quiksilver_mens.jpeg', 'Quiksilver Men\'s Final Hat - Navy', 'Suiting fabric', '34.99', '6'),
 (30, 332426798, 'underarmour_mens.jpeg', 'Under Armour Men\'s Blitzing 3.0 Stretch Fit Hat', 'The Third Generation Of The Most Popular Under Armour Hat. Performance Materials, Classic Fit, And Our Signature HeatGear Sweatband Make This An Easy Favorite.', '29.99', '6'),
-(40, 333033800, 'adidas_shoe.jpeg', 'adidas Men\'s Game Day Running Shoes', 'Every run leads right up to game day. Keeping that in mind, these versatile adidas shoes feature energised cushioning and a locked-down fit for nimble agility. Underfoot, a turf-inspired outsole delivers great grip no matter where you’re prepping to play.', '79.98', '7'),
-(43, 333033800, 'adidas_shoe.jpeg', 'adidas Men\'s Game Day Running Shoes', 'Every run leads right up to game day. Keeping that in mind, these versatile adidas shoes feature energised cushioning and a locked-down fit for nimble agility. Underfoot, a turf-inspired outsole delivers great grip no matter where you’re prepping to play.', '79.98', '7'),
-(44, 332692338, 'asics_shoe.jpeg', 'ASICS Men\'s Gel Excite 6 Running Shoes ', 'The ASICS Men\'s Gel Excite 6 Running Shoes features a durable midsole material that provides cushion for all day comfort. Breathable mesh upper with less overlays provides a more comfortable and better fitting environment. The styling and design cues used were to create more modern and younger silhouette to excite.', '109.99', '7');
+(34, 333033800, 'adidas_shoe.jpeg', 'adidas Men\'s Game Day Running Shoes', 'Every run leads right up to game day. Keeping that in mind, these versatile adidas shoes feature energised cushioning and a locked-down fit for nimble agility. Underfoot, a turf-inspired outsole delivers great grip no matter where you’re prepping to play.', '109.99', '7'),
+(35, 332801215, 'asics_shoe.jpeg', 'ASICS Men\'s Cumulus 20 Running Shoes ', 'A favorite for 20 years and counting. The ASICS Men’s Cumulus 20 Running Shoe celebrates its 20th anniversary with premium technology and a refined design that offers optimal support and comfort for runners of all levels. A FlyteFoam® midsole teams up with rearfoot and forefoot GEL for all day comfort.', '159.99', '7'),
+(36, 332765921, 'new_balance_shoe.jpeg', 'New Balance Men\'s 680v6 4E Running Shoes ', 'Outfitted with a performance-based outsole, the New Balance Men’s M680 V6 4E Running Shoe is a reliable upgrade from our popular 680 men’s running shoe. Plus, a mesh upper provides a conforming and comfortable fit.', '114.99', '7'),
+(37, 333055923, 'nike_shoe.jpeg', 'Nike Men\'s Revolution 5 Running Shoes', 'The Nike Revolution 5 cushions your stride with soft foam to keep you running in comfort. Lightweight knit material wraps your foot in breathable support, while a minimalist design fits in just about anywhere your day takes you.', '65.99', '7'),
+(38, 332783559, 'underarmour_shoe.jpeg', 'Under Armour Men\'s Charged Running Shoes - Black', 'The Under Armour Men’s Charged Escape 3 Running Shoes is a neutral running shoe for those who need a balance of flexibility & cushioning. It’s lightweight upper hugs the foot for breathable, flexible support while the firm external heel counter keeps the of the foot locked in place.', '109.99', '7');
 
 -- --------------------------------------------------------
 
@@ -144,7 +147,15 @@ INSERT INTO `tbl_products_categories` (`prod_cat_id`, `prod_id`, `category_id`) 
 (27, 27, 6),
 (28, 28, 6),
 (29, 29, 6),
-(30, 30, 6);
+(30, 30, 6),
+(31, 31, 7),
+(32, 32, 7),
+(33, 33, 7),
+(34, 34, 7),
+(35, 35, 7),
+(36, 36, 7),
+(37, 37, 7),
+(38, 38, 7);
 
 -- --------------------------------------------------------
 
@@ -183,7 +194,7 @@ ALTER TABLE `tbl_category`
 -- Indexes for table `tbl_products`
 --
 ALTER TABLE `tbl_products`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`prod_id`);
 
 --
 -- Indexes for table `tbl_products_categories`
@@ -199,19 +210,19 @@ ALTER TABLE `tbl_products_categories`
 -- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tbl_products`
 --
 ALTER TABLE `tbl_products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `tbl_products_categories`
 --
 ALTER TABLE `tbl_products_categories`
-  MODIFY `prod_cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `prod_cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

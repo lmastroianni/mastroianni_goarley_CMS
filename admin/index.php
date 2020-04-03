@@ -33,13 +33,33 @@
 <body>
     <h2>Welcome! <?php echo $_SESSION['user_name'];?></h2>
 
+
+<h3>User Settings</h3>
     <a href="admin_createuser.php">Create User</a>
     <a href="admin_edituser.php">Edit User</a>
     <a href="admin_deleteuser.php">Delete User</a>
 
-    <a href="admin_addmovie.php">Add Product</a>
+<a href="admin_createproduct.php">Add New Product</a>
 
-    <a href="admin_logout.php">Sign Out</a>
+<a href="admin_logout.php">Sign Out</a>
+    
+
+<h2>Products</h2>
+
+
+
+<?php while ($row = $getProds->fetch(PDO::FETCH_ASSOC)): ?>
+    <div class="prodItem editProduct">
+        <img src="../images/<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>" />
+        <h5><?php echo $row['price']; ?></h5>
+        <h2><?php echo $row['name']; ?></h2>
+    </div>
+   
+    <a href="admin_editproduct.php?id=<?php echo $row['prod_id']; ?>">Edit Product</a>
+    
+    <a href="admin_deleteproduct.php?id=<?php echo $row['prod_id']; ?>">Delete Product</a>
+<?php endwhile; ?>
+
 </body>
 </html>
 
