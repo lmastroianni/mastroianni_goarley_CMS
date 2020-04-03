@@ -1,4 +1,4 @@
-#### Sportchek CMS
+## Sportchek CMS
 This is the Docker environment set up for Movie Review
 
 This project was made for the purpose of creating a mockup ecommerce store of SportChek and then create a fully functional custom CMS where new products can be updated and removed, as well as adding and removing users from the admin list.
@@ -23,7 +23,7 @@ Open the project in your terminal, then paste the following and go.
 $ docker-compose up
 Then in the browser of your choice, paste the following url:
 
-localhost:8050
+localhost:8888
 Using MAMP/ WAMP:
 
 Move the project folder into either your 'htdocs' or 'WWW' folder within MAMP or WAMP. Then navigate to your MAMP or WAMP server page and select the project.
